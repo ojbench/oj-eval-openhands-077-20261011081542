@@ -94,10 +94,6 @@ namespace sjtu {
     }
 
     void CrossArray::AppendArrays(const int * Input, int Line, int size) {
-        if (Line < 0 || Line >= capacity || arrays[Line] == nullptr) {
-            return;
-        }
-        
         int oldSize = sizes[Line];
         int newSize = oldSize + size;
         
@@ -140,9 +136,6 @@ namespace sjtu {
     }
 
     const int * CrossArray::AtArray(int i) {
-        if (i < 0 || i >= capacity) {
-            return nullptr;
-        }
         return arrays[i];
     }
 
