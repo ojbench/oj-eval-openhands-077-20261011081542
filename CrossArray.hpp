@@ -79,7 +79,7 @@ namespace sjtu {
     }
 
     bool CrossArray::IsSame(const CrossArray & o) {
-        return (arrays == o.arrays);
+        return (arrays == o.arrays) && (sizes == o.sizes) && (capacity == o.capacity) && (count == o.count);
     }
 
     bool CrossArray::InsertArrays(const int * Input, int size) {
